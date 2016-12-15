@@ -135,6 +135,9 @@ var insertStudent = function insertStudent(student)
 
 //AGGIUNGERE QUI SOTTO NUOVE FUNZIONI
 
+var searchByMark = function searchbyMark(){
+    
+}
 
 
 //export functions
@@ -144,3 +147,4 @@ exports.deleteStudentID = deleteStudentID;
 exports.deleteStudentSSN = deleteStudentSSN; 
 exports.insertStudent = insertStudent;  
 exports.getList = getList; 
+exports.searchByMark = searchByMark;

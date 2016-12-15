@@ -272,3 +272,12 @@ app.listen(app.get('port'), function() {
 });
 
 //AGGIUNGERE QUI SOTTO NUOVE FUNZIONI
+
+app.post('/searchByMark', function(request, response)
+{
+    var headers = {};
+	headers["Content-Type"] = "text/html";
+    
+    response.writeHead(200, headers);
+	response.end(JSON.stringify(studentManager.searchByMark()));
+});
