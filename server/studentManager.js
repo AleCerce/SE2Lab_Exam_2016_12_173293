@@ -135,8 +135,30 @@ var insertStudent = function insertStudent(student)
 
 //AGGIUNGERE QUI SOTTO NUOVE FUNZIONI
 
-var searchByMark = function searchbyMark(){
+var searchByMark = function searchByMark(mark){ //mark è l'input dell'utente, es. >7
     
+    var studentListMark=[];
+    var numero= getNumber; //ottengo il numero del confronto dall'input;
+    
+    if(mark == '>'+ numero){
+        
+            for(int i=0; i<studentList.length;i++){
+                if(studentList.mark > numero){
+                    studentList[i] =studentListMark.push; //metto in lista se è maggiore
+                }
+            }
+            
+       }
+    if(mark == '<'+ numero){
+            for(int i=0; i<studentList.length;i++){
+                if(studentList.mark < numero){
+                    studentList[i] =studentListMark.push; //metto in lista se è minore
+                }
+            }
+            
+       }
+
+    return studentListMark;
 }
 
 
@@ -147,4 +169,5 @@ exports.deleteStudentID = deleteStudentID;
 exports.deleteStudentSSN = deleteStudentSSN; 
 exports.insertStudent = insertStudent;  
 exports.getList = getList; 
+//funzione mia
 exports.searchByMark = searchByMark;

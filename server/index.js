@@ -277,6 +277,18 @@ app.post('/searchByMark', function(request, response)
 {
     var headers = {};
 	headers["Content-Type"] = "text/html";
+    headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept";
+    
+    var studentMark;
+    
+    if ( typeof request.body !== 'undefined' && request.body)
+	{
+		if ( typeof request.body.mark !== 'undefined' && request.body.mark)
+            {
+			 studentMark = request.body.mark;
+            }
+		else 
+			studentMark = "not defined";
     
     response.writeHead(200, headers);
 	response.end(JSON.stringify(studentManager.searchByMark()));
